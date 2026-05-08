@@ -71,7 +71,31 @@ The app includes an optional API script:
 npm run api
 ```
 
-The demo is still usable without a live AI backend because it includes synthetic data and local fallback narratives.
+To use OpenAI-backed narrative generation, create a local `.env` file:
+
+```bash
+cp .env.example .env
+```
+
+Then edit `.env`:
+
+```env
+OPENAI_API_KEY=sk-your-key-here
+OPENAI_MODEL=gpt-4o-mini
+COORDINA_API_PORT=8787
+```
+
+Run the API server and frontend in two terminals:
+
+```bash
+npm run api
+```
+
+```bash
+npm run dev
+```
+
+Terminal environment variables still take priority over `.env` values. The demo is usable without a live AI backend because it includes synthetic data and local fallback narratives.
 
 ## Project Structure
 
@@ -118,4 +142,3 @@ npm run preview  # Preview production build locally
 ## Repository Notes
 
 Generated output, local dependencies, logs, TypeScript build info, and private environment files should not be committed. See `.gitignore`.
-

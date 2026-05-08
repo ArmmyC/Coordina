@@ -1,4 +1,5 @@
 import http from "node:http";
+import "./lib/env/load-env.mjs";
 import {
   fallbackAnomaly,
   fallbackBrief,
@@ -15,7 +16,7 @@ import {
 } from "./lib/ai/schemas.mjs";
 import { stepSimulationFallback } from "./lib/simulation/step.mjs";
 
-const port = Number(process.env.CAREFLOW_API_PORT || 8787);
+const port = Number(process.env.COORDINA_API_PORT || 8787);
 
 const server = http.createServer(async (request, response) => {
   if (request.method === "OPTIONS") {
@@ -143,4 +144,3 @@ function sendJson(response, status, payload) {
     response.end();
   }
 }
-
