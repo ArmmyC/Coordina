@@ -16,7 +16,7 @@ const toneClasses = {
 
 export function IconTile({ children, tone = "teal" }: IconTileProps) {
   return (
-    <div className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl ${toneClasses[tone]}`}>
+    <div className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-lg ${toneClasses[tone]}`}>
       {children}
     </div>
   );

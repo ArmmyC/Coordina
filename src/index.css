@@ -24,9 +24,7 @@ body {
   min-width: 320px;
   min-height: 100vh;
   overflow-x: hidden;
-  background:
-    radial-gradient(circle at top left, rgba(7, 137, 154, 0.08), transparent 34rem),
-    linear-gradient(180deg, #f8fbfd 0%, #f3f7fb 48%, #eef4f7 100%);
+  background: #f8fafc;
 }
 
 #root {
@@ -43,10 +41,16 @@ button {
   cursor: pointer;
 }
 
+button:focus-visible,
+select:focus-visible {
+  outline: 2px solid #67e8f9;
+  outline-offset: 2px;
+}
+
 .glass-card {
   background: rgba(255, 255, 255, 0.92);
   border: 1px solid rgba(148, 163, 184, 0.24);
-  box-shadow: 0 16px 40px rgba(15, 27, 51, 0.08);
+  box-shadow: 0 12px 28px rgba(15, 27, 51, 0.07);
 }
 
 .subtle-grid {

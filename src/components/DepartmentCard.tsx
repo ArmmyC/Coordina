@@ -1,5 +1,5 @@
 import { Clock3 } from "lucide-react";
-import type { DepartmentSignal } from "../types";
+import type { DepartmentSignal, Tone } from "../types";
 import { minutesToHuman } from "../utils/insightEngine";
 import { getDepartmentIcon, getDepartmentTone } from "./departmentIcons";
 import { IconTile } from "./IconTile";
@@ -30,6 +30,7 @@ export function DepartmentCard({ department, onOpen }: DepartmentCardProps) {
             <StatusBadge label={department.status} tone={department.tone} size="sm" />
           </div>
         </div>
+        <StatusBadge label={department.bottleneckRole} tone={roleTone(department.bottleneckRole)} size="sm" />
       </div>
 
       <div className="mt-4 grid grid-cols-2 gap-3">
@@ -47,7 +48,22 @@ export function DepartmentCard({ department, onOpen }: DepartmentCardProps) {
       </div>
 
       <p className="mt-4 min-h-12 text-sm leading-6 text-slate-600">{department.summary}</p>
-      <p className="mt-3 text-xs font-bold text-ai opacity-0 transition group-hover:opacity-100">Open local evidence</p>
+      <p className="mt-2 text-xs font-semibold text-slate-500">Updated {department.lastUpdatedAt}</p>
+      <p className="mt-3 text-xs font-bold text-ai opacity-0 transition group-hover:opacity-100">
+        Open detail drawer
+      </p>
     </button>
   );
+}
+
+function roleTone(role: DepartmentSignal["bottleneckRole"]): Tone {
+  if (role === "primary contributor") {
+    return "ai";
+  }
+
+  if (role === "secondary contributor") {
+    return "warning";
+  }
+
+  return "neutral";
 }

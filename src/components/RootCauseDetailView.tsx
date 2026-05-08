@@ -98,7 +98,7 @@ export function RootCauseDetailView({
                       <h4 className="font-bold text-ink">{department.name}</h4>
                       <StatusBadge
                         label={department.bottleneckRole}
-                        tone={department.bottleneckRole === "Primary cause" ? "ai" : "neutral"}
+                        tone={department.bottleneckRole === "primary contributor" ? "ai" : "neutral"}
                         size="sm"
                       />
                     </div>

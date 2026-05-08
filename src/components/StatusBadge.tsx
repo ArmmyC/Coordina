@@ -20,7 +20,7 @@ export function StatusBadge({ label, tone = "neutral", size = "md" }: StatusBadg
   return (
     <span
       className={[
-        "inline-flex items-center rounded-full font-semibold ring-1 ring-inset",
+        "inline-flex items-center whitespace-nowrap rounded-full font-semibold ring-1 ring-inset",
         size === "sm" ? "px-2 py-1 text-[11px]" : "px-3 py-1.5 text-xs",
         toneClasses[tone],
       ].join(" ")}

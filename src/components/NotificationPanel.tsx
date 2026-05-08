@@ -1,4 +1,4 @@
-import { Bell, Check, ClipboardPlus, Eye, X } from "lucide-react";
+import { AlertTriangle, Bell, Check, ClipboardPlus, Eye, X } from "lucide-react";
 import type { NotificationItem } from "../types";
 
 interface NotificationPanelProps {
@@ -6,6 +6,8 @@ interface NotificationPanelProps {
   onClose: () => void;
   onOpenInsight: () => void;
   onOpenAnomaly: () => void;
+  onAddAnomalyToBrief: () => void;
+  isAnomalyInBrief: boolean;
   onAddBriefSuggestions: () => void;
   onMarkReviewed: (id: string) => void;
 }
@@ -14,7 +16,6 @@ const severityClasses = {
   Passive: "bg-slate-100 text-slate-600",
   Important: "bg-amber-100 text-amber-700",
   Escalation: "bg-red-100 text-red-700",
-  Update: "bg-cyan-50 text-ai",
 };
 
 export function NotificationPanel({
@@ -22,6 +23,8 @@ export function NotificationPanel({
   onClose,
   onOpenInsight,
   onOpenAnomaly,
+  onAddAnomalyToBrief,
+  isAnomalyInBrief,
   onAddBriefSuggestions,
   onMarkReviewed,
 }: NotificationPanelProps) {
@@ -68,8 +71,8 @@ export function NotificationPanel({
         </div>
 
         <p className="mt-4 text-sm leading-6 text-slate-600">
-          Alerts stay passive unless an operational pattern needs human review. CareFlow does not infer diagnoses or
-          confirm outbreaks.
+          Notifications stay passive unless an unusual operational pattern needs human review.
+          CareFlow reports anomaly scores and above-baseline signals only.
         </p>
 
         <div className="mt-6 space-y-4">
@@ -78,7 +81,11 @@ export function NotificationPanel({
               key={notification.id}
               className={[
                 "rounded-2xl border p-4 shadow-sm",
-                notification.reviewed ? "border-slate-200 bg-slate-50" : "border-cyan-100 bg-white",
+                notification.severity === "Escalation" && !notification.reviewed
+                  ? "border-red-200 bg-red-50"
+                  : notification.reviewed
+                    ? "border-slate-200 bg-slate-50"
+                    : "border-cyan-100 bg-white",
               ].join(" ")}
             >
               <div className="flex items-start justify-between gap-3">
@@ -95,10 +102,15 @@ export function NotificationPanel({
                     <span className="text-xs font-semibold text-slate-500">{notification.timestamp}</span>
                   </div>
                   <h3 className="mt-2 text-base font-bold text-ink">{notification.title}</h3>
+                  <p className="mt-1 text-xs font-semibold text-slate-500">{notification.type}</p>
                 </div>
-                {notification.reviewed ? <Check className="h-5 w-5 text-green-600" /> : null}
+                {notification.severity === "Escalation" && !notification.reviewed ? (
+                  <AlertTriangle className="h-5 w-5 text-red-600" />
+                ) : notification.reviewed ? (
+                  <Check className="h-5 w-5 text-green-600" />
+                ) : null}
               </div>
-              <p className="mt-3 text-sm leading-6 text-slate-600">{notification.explanation}</p>
+              <p className="mt-3 text-sm leading-6 text-slate-600">{notification.message}</p>
               <div className="mt-4 flex flex-wrap gap-2">
                 <button
                   type="button"
@@ -108,6 +120,16 @@ export function NotificationPanel({
                   {notification.target === "brief" ? <ClipboardPlus className="h-4 w-4" /> : <Eye className="h-4 w-4" />}
                   {notification.actionLabel}
                 </button>
+                {notification.target === "anomaly" ? (
+                  <button
+                    type="button"
+                    onClick={onAddAnomalyToBrief}
+                    className="inline-flex items-center gap-2 rounded-xl border border-amber-200 bg-white px-3 py-2 text-sm font-bold text-amber-700 transition hover:bg-amber-50"
+                  >
+                    {isAnomalyInBrief ? <Check className="h-4 w-4" /> : <ClipboardPlus className="h-4 w-4" />}
+                    {isAnomalyInBrief ? "In brief" : "Add to brief"}
+                  </button>
+                ) : null}
                 <button
                   type="button"
                   onClick={() => onMarkReviewed(notification.id)}
