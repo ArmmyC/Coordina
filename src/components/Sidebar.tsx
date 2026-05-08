@@ -35,7 +35,7 @@ export function Sidebar({ activePage, unreadCount, onNavigate }: SidebarProps) {
           <Plus className="h-6 w-6" strokeWidth={2.7} />
         </div>
         <div>
-          <p className="text-xl font-bold tracking-tight text-ai">CareFlow</p>
+          <p className="text-xl font-bold tracking-tight text-ai">Coordina</p>
           <p className="text-xs font-semibold text-slate-500">Operations AI</p>
         </div>
       </div>

@@ -536,7 +536,7 @@ function GovernanceBoundaries() {
       <SectionTitle
         icon={<Database className="h-5 w-5" />}
         title="Safety Boundaries"
-        helper="CareFlow stays in operational coordination support and keeps humans accountable."
+        helper="Coordina stays in operational coordination support and keeps humans accountable."
       />
       <div className="mt-4 space-y-3">
         {governanceBoundaries.map((boundary) => (

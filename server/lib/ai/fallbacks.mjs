@@ -1,5 +1,5 @@
 const safetyNote =
-  "CareFlow provides coordination support only. No clinical decisions are made by CareFlow; humans review and act.";
+  "Coordina provides coordination support only. No clinical decisions are made by Coordina; humans review and act.";
 
 const departmentLabels = {
   ed: "ED",
@@ -87,7 +87,7 @@ export function fallbackBrief({ state, insight, actions }) {
     title: `${state?.simulatedTime ?? "Current"} Hospital Flow Brief`,
     summary:
       insight?.conciseSummary ??
-      "CareFlow identified a respiratory-surge operational bottleneck with downstream capacity effects.",
+      "Coordina identified a respiratory-surge operational bottleneck with downstream capacity effects.",
     actions: (actions ?? []).map((item) => item.briefText ?? `${item.ownerRole}: ${item.title}`).slice(0, 5),
     safetyNote,
   });

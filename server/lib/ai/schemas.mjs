@@ -24,7 +24,7 @@ const actionSchema = {
 };
 
 export const centralInsightSchema = {
-  name: "careflow_central_insight",
+  name: "coordina_central_insight",
   schema: {
     type: "object",
     additionalProperties: false,
@@ -60,7 +60,7 @@ export const centralInsightSchema = {
 };
 
 export const departmentInsightSchema = {
-  name: "careflow_department_insight",
+  name: "coordina_department_insight",
   schema: {
     type: "object",
     additionalProperties: false,
@@ -91,7 +91,7 @@ export const departmentInsightSchema = {
 };
 
 export const anomalySchema = {
-  name: "careflow_anomaly",
+  name: "coordina_anomaly",
   schema: {
     type: "object",
     additionalProperties: false,
@@ -108,7 +108,7 @@ export const anomalySchema = {
 };
 
 export const briefSchema = {
-  name: "careflow_brief",
+  name: "coordina_brief",
   schema: {
     type: "object",
     additionalProperties: false,

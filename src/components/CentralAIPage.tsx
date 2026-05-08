@@ -20,7 +20,7 @@ import {
 import type { ReactNode } from "react";
 import type {
   AnomalyEvent,
-  CareFlowInsight,
+  CoordinaInsight,
   DepartmentId,
   DepartmentSignal,
   InsightSeverity,
@@ -36,7 +36,7 @@ import { EvidenceChip } from "./EvidenceChip";
 import { StatusBadge } from "./StatusBadge";
 
 interface CentralAIPageProps {
-  insight: CareFlowInsight;
+  insight: CoordinaInsight;
   departments: DepartmentSignal[];
   secondaryIssues: SecondaryIssue[];
   timeline: InsightTimelineEvent[];
@@ -155,7 +155,7 @@ function PrimaryBottleneckHero({
   insight,
   onSaveInsightSnapshot,
 }: {
-  insight: CareFlowInsight;
+  insight: CoordinaInsight;
   onSaveInsightSnapshot: () => void;
 }) {
   return (
@@ -236,7 +236,7 @@ function InsightFact({ label, value, emphasized = false }: { label: string; valu
   );
 }
 
-function CauseChainSection({ insight }: { insight: CareFlowInsight }) {
+function CauseChainSection({ insight }: { insight: CoordinaInsight }) {
   return (
     <section className="rounded-lg border border-slate-200 bg-white p-5 shadow-soft">
       <div className="flex items-center gap-2">
@@ -534,7 +534,7 @@ function SafetyBoundary() {
         <h2 className="text-base font-bold">Coordination support only</h2>
       </div>
       <p className="mt-3 text-sm leading-6 text-slate-700">
-        No clinical decisions are made by CareFlow. Clinical safety takes priority over flow improvement, and all suggested
+        No clinical decisions are made by Coordina. Clinical safety takes priority over flow improvement, and all suggested
         follow-up actions require human review.
       </p>
     </section>

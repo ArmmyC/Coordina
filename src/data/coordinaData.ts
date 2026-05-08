@@ -13,7 +13,7 @@ import type {
 const primaryInsightId = "insight-output-blockage-1032";
 
 const safetyNote =
-  "CareFlow provides coordination support only. Human teams review and act; clinical safety takes priority over time saving.";
+  "Coordina provides coordination support only. Human teams review and act; clinical safety takes priority over time saving.";
 
 const departments: DepartmentSignal[] = [
   {
@@ -181,7 +181,7 @@ const departments: DepartmentSignal[] = [
     structureNotes: [
       "The high-impact queue is discharge medication, not inpatient medication supply.",
       "Medication pack readiness is coupled with pickup timing and bed release.",
-      "Pharmacy review remains operational; CareFlow does not make medication decisions.",
+      "Pharmacy review remains operational; Coordina does not make medication decisions.",
     ],
     flowStages: [
       {
@@ -541,7 +541,7 @@ const primaryInsight: Insight = {
   naiveExplanation: "Too many new patients arrived this morning.",
   actualInsight:
     "The main bottleneck is not initial triage demand. ED patients are waiting because ward beds are blocked by delayed discharge medication preparation, bed cleaning, family pickup coordination, and limited transport capacity.",
-  careFlowInsight:
+  coordinaInsight:
     "The main bottleneck is not initial triage demand. ED patients are waiting because ward beds are blocked by delayed discharge medication preparation, bed cleaning, family pickup coordination, and limited transport capacity.",
   whyNaiveIncomplete:
     "New ED arrivals are only modestly above baseline. Most lost time appears after admission or discharge readiness, where ward turnover, medications, cleaning, pickup, and transport interact.",

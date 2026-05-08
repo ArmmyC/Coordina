@@ -72,7 +72,7 @@ export function NotificationPanel({
 
         <p className="mt-4 text-sm leading-6 text-slate-600">
           Notifications stay passive unless an unusual operational pattern needs human review.
-          CareFlow reports anomaly scores and above-baseline signals only.
+          Coordina reports anomaly scores and above-baseline signals only.
         </p>
 
         <div className="mt-6 space-y-4">

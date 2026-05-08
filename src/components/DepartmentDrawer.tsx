@@ -123,7 +123,7 @@ export function DepartmentDrawer({ department, isInBrief, onAddToBrief, onClose 
             ))}
           </div>
           <p className="mt-4 text-sm leading-6 text-slate-600">
-            CareFlow uses this local agent summary as evidence for hospital-wide coordination reasoning. It does not
+            Coordina uses this local agent summary as evidence for hospital-wide coordination reasoning. It does not
             decide clinical priority or discharge readiness.
           </p>
         </section>

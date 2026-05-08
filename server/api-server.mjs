@@ -86,7 +86,7 @@ const server = http.createServer(async (request, response) => {
       return;
     }
 
-    sendJson(response, 404, { error: "Unknown CareFlow API route" });
+    sendJson(response, 404, { error: "Unknown Coordina API route" });
   } catch (error) {
     sendJson(response, 500, {
       error: error instanceof Error ? error.message : "Unexpected server error",
@@ -95,7 +95,7 @@ const server = http.createServer(async (request, response) => {
 });
 
 server.listen(port, "127.0.0.1", () => {
-  console.log(`CareFlow API listening on http://127.0.0.1:${port}`);
+  console.log(`Coordina API listening on http://127.0.0.1:${port}`);
 });
 
 function compactState(state) {

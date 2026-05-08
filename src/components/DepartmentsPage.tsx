@@ -79,7 +79,7 @@ export function DepartmentsPage({ departments, selectedDepartment, onSelectDepar
             <h2 className="text-base font-bold text-ink">{selectedDepartment.name} Flow Map</h2>
           </div>
           <p className="mt-2 text-sm leading-6 text-slate-600">
-            Each department has its own operational structure. CareFlow reads these local stages before linking them to
+            Each department has its own operational structure. Coordina reads these local stages before linking them to
             the central bottleneck.
           </p>
 

@@ -1,0 +1,51 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+build/
+
+# Vite and TypeScript cache
+node_modules/.vite/
+*.tsbuildinfo
+
+# Environment variables and secrets
+.env
+.env.local
+.env.*.local
+!.env.example
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+vite.log
+vite.err
+
+# Test and coverage output
+coverage/
+playwright-report/
+test-results/
+
+# Local editor settings
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Operating system files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Temporary files
+.cache/
+*.tmp
+*.temp
+
+# Optional private planning and research docs
+deep-research-report-*.md
+Coordina_*.md
+coordina_ui_blueprint.md

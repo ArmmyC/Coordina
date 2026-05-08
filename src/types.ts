@@ -143,13 +143,13 @@ export interface Insight {
   safetyNote: string;
   whyNaiveIncomplete: string;
   mainBottleneck: string;
-  careFlowInsight: string;
+  coordinaInsight: string;
   supportingEvidence: string[];
   highestLeverageActions: SuggestedAction[];
   conciseSummary: string;
 }
 
-export type CareFlowInsight = Insight;
+export type CoordinaInsight = Insight;
 
 export interface SecondaryIssue {
   id: string;

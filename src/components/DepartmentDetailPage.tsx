@@ -132,7 +132,7 @@ export function DepartmentDetailPage({ department, allDepartments, onBack }: Dep
             <h2 className="text-xl font-bold text-ink">Cross-Department Links</h2>
           </div>
           <p className="mt-2 text-sm leading-6 text-slate-600">
-            This page shows local operational signals. Central CareFlow reasoning combines them with other agents before
+            This page shows local operational signals. Central Coordina reasoning combines them with other agents before
             recommending any follow-up path.
           </p>
           <div className="mt-4 flex flex-wrap gap-2">

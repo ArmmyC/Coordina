@@ -1,8 +1,8 @@
-import type { CareFlowInsight, HospitalSnapshot, Insight } from "../types";
+import type { CoordinaInsight, HospitalSnapshot, Insight } from "../types";
 
 export const generatePrimaryInsight = (snapshot: HospitalSnapshot): Insight => snapshot.primaryInsight;
 
-export const generateCareFlowInsight = (snapshot: HospitalSnapshot): CareFlowInsight =>
+export const generateCoordinaInsight = (snapshot: HospitalSnapshot): CoordinaInsight =>
   generatePrimaryInsight(snapshot);
 
 export const minutesToHuman = (minutes: number) => {

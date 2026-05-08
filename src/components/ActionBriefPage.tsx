@@ -1,11 +1,11 @@
 import { Check, Clock3, Copy, FileText, GitBranch, RefreshCw, Save, ShieldCheck, Trash2 } from "lucide-react";
-import type { BriefSnapshot, CareFlowInsight, SuggestedAction, Tone } from "../types";
+import type { BriefSnapshot, CoordinaInsight, SuggestedAction, Tone } from "../types";
 import { minutesToHuman } from "../utils/insightEngine";
 import { EvidenceChip } from "./EvidenceChip";
 import { StatusBadge } from "./StatusBadge";
 
 interface ActionBriefPageProps {
-  currentInsight: CareFlowInsight;
+  currentInsight: CoordinaInsight;
   snapshots: BriefSnapshot[];
   selectedSnapshot?: BriefSnapshot;
   stagedActions: SuggestedAction[];
@@ -295,7 +295,7 @@ function CurrentInsightDraft({
   onRemoveStagedAction,
   onSave,
 }: {
-  currentInsight: CareFlowInsight;
+  currentInsight: CoordinaInsight;
   stagedActions: SuggestedAction[];
   onRemoveStagedAction: (action: SuggestedAction) => void;
   onSave: () => void;

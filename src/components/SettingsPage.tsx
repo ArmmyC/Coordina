@@ -18,7 +18,7 @@ export function SettingsPage({ snapshot, isLive, onToggleLive }: SettingsPagePro
           </div>
           <div>
             <p className="text-sm font-bold text-ai">Demo settings</p>
-            <h1 className="mt-1 text-3xl font-bold text-ink">CareFlow Boundaries</h1>
+            <h1 className="mt-1 text-3xl font-bold text-ink">Coordina Boundaries</h1>
             <p className="mt-2 max-w-3xl text-sm leading-6 text-slate-600">
               This MVP uses synthetic data to demonstrate operational coordination support for hospital flow teams.
             </p>
@@ -64,7 +64,7 @@ export function SettingsPage({ snapshot, isLive, onToggleLive }: SettingsPagePro
             <h2 className="text-base font-bold">Safety boundary</h2>
           </div>
           <p className="mt-3 text-sm leading-6 text-slate-700">
-            CareFlow can summarize bottlenecks, identify time loss, flag unusual operational patterns, and prepare
+            Coordina can summarize bottlenecks, identify time loss, flag unusual operational patterns, and prepare
             briefs. It cannot diagnose, prescribe, make admission or discharge decisions, set triage priority, or make
             clinical predictions.
           </p>

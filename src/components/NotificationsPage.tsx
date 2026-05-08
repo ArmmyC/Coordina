@@ -20,7 +20,7 @@ export function NotificationsPage({ notifications, onNotificationAction, onMarkR
             <p className="text-sm font-bold text-ai">Notification center</p>
             <h1 className="mt-1 text-3xl font-bold text-ink">Operational Updates</h1>
             <p className="mt-2 max-w-3xl text-sm leading-6 text-slate-600">
-              Anomalies and bottleneck changes stay here unless they require visible review. CareFlow reports
+              Anomalies and bottleneck changes stay here unless they require visible review. Coordina reports
               operational patterns, not diagnoses.
             </p>
           </div>

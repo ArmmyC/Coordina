@@ -22,7 +22,7 @@ import { getScenarioPreset } from "./scenarios";
 import type { SimulationEvent, SimulationState } from "./types";
 
 const safetyNote =
-  "CareFlow provides coordination support only. No clinical decisions are made by CareFlow; humans review and act.";
+  "Coordina provides coordination support only. No clinical decisions are made by Coordina; humans review and act.";
 
 const departmentNames: Record<DepartmentId, string> = {
   ed: "ED",
@@ -116,7 +116,7 @@ function buildInsight(state: SimulationState, aiCentral?: CentralInsightResponse
     visibleProblem: sanitizeOperationalText(central.visibleProblem),
     naiveExplanation: sanitizeOperationalText(central.naiveExplanation),
     actualInsight: sanitizeOperationalText(central.actualInsight),
-    careFlowInsight: sanitizeOperationalText(central.actualInsight),
+    coordinaInsight: sanitizeOperationalText(central.actualInsight),
     whyNaiveIncomplete:
       "Arrivals are part of the pressure, but most lost time is downstream after bed request, discharge readiness, medication readiness, pickup confirmation, or transport coordination.",
     departmentsInvolved: central.departmentsInvolved.length
@@ -529,7 +529,7 @@ function flowStagesFor(state: SimulationState, department: DepartmentId): Depart
     ],
     pharmacy: [
       stage("pharm-queue", "Discharge med queue", "Pharmacy coordinator", `${m.pharmacyDischargeMedBacklog} packs pending`, statusFromValue(m.pharmacyDischargeMedBacklog, 22, 36), "Queue visible within 10m"),
-      stage("pharm-verify", "Medication review", "Pharmacist", `${m.pharmacyMedianDelayMinutes}m median delay`, statusFromValue(m.pharmacyMedianDelayMinutes, 60, 95), "No medication decisions by CareFlow"),
+      stage("pharm-verify", "Medication review", "Pharmacist", `${m.pharmacyMedianDelayMinutes}m median delay`, statusFromValue(m.pharmacyMedianDelayMinutes, 60, 95), "No medication decisions by Coordina"),
       stage("pharm-pack", "Pack preparation", "Pharmacy technician", "Preparation queue coupled to discharge timing", statusFromValue(m.pharmacyDischargeMedBacklog, 22, 36), "Local target under 60m"),
       stage("pharm-handover", "Handover to ward", "Ward nurse", `${m.dischargeReadyBlocked} downstream blocked`, statusFromValue(m.dischargeReadyBlocked, 12, 24), "Coordinate with pickup window"),
     ],
@@ -568,7 +568,7 @@ function statusFromValue(value: number, warning: number, critical: number) {
 function structureNotesFor(department: DepartmentId) {
   const notes: Record<DepartmentId, string[]> = {
     ed: [
-      "Triage remains clinically human-owned; CareFlow only summarizes operational pressure.",
+      "Triage remains clinically human-owned; Coordina only summarizes operational pressure.",
       "Respiratory-like arrivals increase ED pressure, but boarders show downstream flow loss.",
       "The main split to watch is new arrivals versus admitted boarders waiting to move.",
     ],
@@ -580,7 +580,7 @@ function structureNotesFor(department: DepartmentId) {
     pharmacy: [
       "The relevant queue is discharge medication readiness, not prescribing decisions.",
       "Medication pack timing can delay bed release after clinical discharge readiness.",
-      "CareFlow suggests queue review only; it does not alter medications.",
+      "Coordina suggests queue review only; it does not alter medications.",
     ],
     discharge: [
       "The page separates clinical discharge readiness from non-clinical blockers.",
@@ -590,12 +590,12 @@ function structureNotesFor(department: DepartmentId) {
     transport: [
       "Transport can become a final blocker after a patient is otherwise ready to move.",
       "Porter availability and family pickup are related but separate queues.",
-      "CareFlow recommends review, not movement orders.",
+      "Coordina recommends review, not movement orders.",
     ],
     radiology: [
       "Radiology can amplify ED pressure but may remain secondary to bed turnover.",
       "The page separates CT, X-ray, ultrasound, and report turnaround.",
-      "CareFlow reports operational queue impact only.",
+      "Coordina reports operational queue impact only.",
     ],
   };
   return notes[department];
@@ -632,7 +632,7 @@ function departmentWhyFor(state: SimulationState, department: DepartmentId) {
     ed: "ED is where the pressure is visible, but the fastest relief often depends on downstream teams converting readiness into movement.",
     beds: "Beds connect discharge completion to ED output; small turnover gains can unlock several queues.",
     pharmacy: "Medication readiness can convert discharge-ready patients into available beds, reducing boarding pressure.",
-    discharge: "Discharge coordination releases capacity without asking CareFlow to make any clinical discharge decision.",
+    discharge: "Discharge coordination releases capacity without asking Coordina to make any clinical discharge decision.",
     transport: "Transport can prevent otherwise-ready beds and transfers from becoming real movement.",
     radiology: "Radiology stays monitored because imaging queues can amplify ED pressure, even when not primary.",
   };

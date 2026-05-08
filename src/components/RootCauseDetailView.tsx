@@ -1,5 +1,5 @@
 import { CheckCircle2, GitBranch, Lightbulb, ShieldCheck, X } from "lucide-react";
-import type { CareFlowInsight, DepartmentSignal, SuggestedAction } from "../types";
+import type { CoordinaInsight, DepartmentSignal, SuggestedAction } from "../types";
 import { CauseChain } from "./CauseChain";
 import { ConfidenceBadge } from "./ConfidenceBadge";
 import { EvidenceChip } from "./EvidenceChip";
@@ -7,7 +7,7 @@ import { StatusBadge } from "./StatusBadge";
 import { SuggestedActionCard } from "./SuggestedActionCard";
 
 interface RootCauseDetailViewProps {
-  insight: CareFlowInsight;
+  insight: CoordinaInsight;
   departments: DepartmentSignal[];
   briefActionIds: string[];
   onAddToBrief: (action: SuggestedAction) => void;
@@ -56,7 +56,7 @@ export function RootCauseDetailView({
               <div className="mt-4 space-y-3">
                 <ReasoningRow label="Visible symptom" value={insight.visibleProblem} />
                 <ReasoningRow label="Naive explanation" value={insight.naiveExplanation} />
-                <ReasoningRow label="CareFlow insight" value={insight.careFlowInsight} emphasized />
+                <ReasoningRow label="Coordina insight" value={insight.coordinaInsight} emphasized />
                 <ReasoningRow label="Why naive explanation is incomplete" value={insight.whyNaiveIncomplete} />
               </div>
             </article>

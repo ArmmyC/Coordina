@@ -9,7 +9,7 @@ import { SettingsPage } from "./components/SettingsPage";
 import { type AppPage, Sidebar } from "./components/Sidebar";
 import { SimulationControlPanel } from "./components/SimulationControlPanel";
 import { SirirajSurgePage } from "./components/SirirajSurgePage";
-import { initialBriefSnapshots } from "./data/careflowData";
+import { initialBriefSnapshots } from "./data/coordinaData";
 import { directorBriefing, sirirajSuggestedActions } from "./data/sirirajSurgeData";
 import {
   requestAnomalyExplanation,

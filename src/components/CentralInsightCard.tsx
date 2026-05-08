@@ -9,14 +9,14 @@ import {
   TrendingDown,
   TrendingUp,
 } from "lucide-react";
-import type { CareFlowInsight, InsightSeverity, SuggestedAction, Tone, TrendDirection } from "../types";
+import type { CoordinaInsight, InsightSeverity, SuggestedAction, Tone, TrendDirection } from "../types";
 import { CauseChain } from "./CauseChain";
 import { ConfidenceBadge } from "./ConfidenceBadge";
 import { EvidenceChip } from "./EvidenceChip";
 import { StatusBadge } from "./StatusBadge";
 
 interface CentralInsightCardProps {
-  insight: CareFlowInsight;
+  insight: CoordinaInsight;
   briefActionIds: string[];
   isInsightInBrief: boolean;
   onAddActionToBrief: (action: SuggestedAction) => void;

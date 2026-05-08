@@ -1,4 +1,4 @@
-import type { CareFlowInsight, DepartmentId, SuggestedAction } from "../../types";
+import type { CoordinaInsight, DepartmentId, SuggestedAction } from "../../types";
 import type { SimulationState } from "../simulation/types";
 import type {
   AiResult,
@@ -33,7 +33,7 @@ export async function requestBriefText({
   actions,
 }: {
   state: SimulationState;
-  insight: CareFlowInsight;
+  insight: CoordinaInsight;
   actions: SuggestedAction[];
 }): Promise<AiResult<BriefResponse> | null> {
   return postAi<BriefResponse>("/api/ai/brief", { state, insight, actions });

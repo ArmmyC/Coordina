@@ -661,7 +661,7 @@ export const governanceBoundaries: GovernanceBoundary[] = [
     id: "sa-md",
     title: "Thai FDA SaMD boundary",
     summary:
-      "CareFlow remains operational surveillance and coordination support, not autonomous diagnosis, triage, or treatment direction.",
+      "Coordina remains operational surveillance and coordination support, not autonomous diagnosis, triage, or treatment direction.",
     requiredPractice: "Keep language non-clinical and require human review before any clinical or irreversible operational decision.",
   },
   {
