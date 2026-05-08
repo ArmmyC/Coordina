@@ -1,0 +1,29 @@
+
+> care-flow-thailand@0.1.0 dev
+> vite --host 127.0.0.1 --port 5173
+
+
+  [32m[1mVITE[22m v5.4.21[39m  [2mready in [0m[1m386[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://127.0.0.1:[1m5173[22m/[39m
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+[2m10:39:52 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/App.tsx, /src/index.css, /src/components/DepartmentCard.tsx, /src/components/DepartmentDrawer.tsx, /src/components/SuggestedActionCard.tsx[22m
+[2m10:39:52 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/CauseChain.tsx, /src/index.css[22m
+[2m10:39:52 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/ConfidenceBadge.tsx, /src/index.css[22m
+[2m10:39:52 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/HeaderBar.tsx, /src/index.css[22m
+[2m10:40:32 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/CauseChain.tsx, /src/index.css[22m
+[2m10:41:46 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/DepartmentCard.tsx, /src/index.css[22m
+[2m10:41:46 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/App.tsx, /src/index.css[22m
+[2m10:43:39 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/HeaderBar.tsx, /src/index.css[22m
+[2m10:43:39 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/KpiCard.tsx, /src/index.css[22m
+[2m10:43:39 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/AnomalyBanner.tsx, /src/index.css[22m
+[2m10:43:39 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/App.tsx, /src/index.css[22m
+[2m10:44:42 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css[22m
+[2m10:44:42 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/AnomalyBanner.tsx, /src/index.css[22m
+[2m10:44:42 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/CentralInsightCard.tsx, /src/index.css[22m
+[2m10:46:12 PM[22m [36m[1m[vite][22m[39m [32mpage reload [39m[2mchrome-profile-debug/Default/Extensions/nmmhkkegccagdldgiimedpiccmgmieda/1.0.0.6_0/html/craw_window.html[22m
+[2m10:46:12 PM[22m [36m[1m[vite][22m[39m [32mpage reload [39m[2mchrome-profile-debug/Default/Extensions/Temp/scoped_dir19708_1336828036/CRX_INSTALL/offscreendocument.html[22m
+[2m10:46:12 PM[22m [36m[1m[vite][22m[39m [32mpage reload [39m[2mchrome-profile-debug/Default/Extensions/ghbmnnjooekpmoecnnnilnnbdlolhkhi/1.104.1_0/offscreendocument.html[22m
+[2m10:46:12 PM[22m [36m[1m[vite][22m[39m [32mpage reload [39m[2mchrome-profile-debug/Default/Extensions/Temp/scoped_dir19708_1336828036/CRX_INSTALL/offscreendocument.html[22m
+[2m10:48:32 PM[22m [36m[1m[vite][22m[39m [32mpage reload [39m[2mchrome-profile-debug/Default/Extensions/ghbmnnjooekpmoecnnnilnnbdlolhkhi/1.104.1_0/offscreendocument.html[22m
+[2m10:48:32 PM[22m [36m[1m[vite][22m[39m [32mpage reload [39m[2mchrome-profile-debug/Default/Extensions/nmmhkkegccagdldgiimedpiccmgmieda/1.0.0.6_0/html/craw_window.html[22m
