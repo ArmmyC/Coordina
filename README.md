@@ -138,7 +138,3 @@ npm run api      # Start optional local API server
 npm run build    # Type-check and build production assets
 npm run preview  # Preview production build locally
 ```
-
-## Repository Notes
-
-Generated output, local dependencies, logs, TypeScript build info, and private environment files should not be committed. See `.gitignore`.
